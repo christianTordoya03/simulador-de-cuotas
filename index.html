@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Préstamo Grupo Tordoya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Préstamo <br> Grupo Tordoya</h1>
+
+        <div class="form-container">
+            <label for="monto">Monto Solicitado:</label>
+            <input type="number" id="monto" placeholder="Ingresa el monto solicitado" value="">
+            
+            <label for="tea">TEA (%) Anual:</label>
+            <input type="number" id="tea" placeholder="Ingresa el TEA" value="" oninput="calcularTasas()">
+            
+            <label for="tem">TEM (%) Mensual:</label>
+            <input type="number" id="tem" placeholder="TEM Calculado" disabled>
+            
+            <label for="cuotas">Número de Cuotas:</label>
+            <input type="number" id="cuotas" placeholder="Ingresa el número de cuotas" value="">
+
+            <button onclick="calcularPrestamo()">Calcular</button>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table id="resultados">
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Saldo Capital</th>
+                        <th>Amortización Capital</th>
+                        <th>Interés</th>
+                        <th>Cuota (C+I)</th>
+                        <th>Seguro Desgravamen</th>
+                        <th>Total Cuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán los resultados -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
